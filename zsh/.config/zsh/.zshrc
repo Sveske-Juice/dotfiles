@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,6 +98,10 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="nvim"
 alias nvedit="nvim $HOME/.config/nvim"
+
+# Path to your oh-my-zsh installation.
+export ZSH=/usr/share/oh-my-zsh/
+export ZSH_CUSTOM=$XDG_CONFIG_HOME/zsh/custom
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
