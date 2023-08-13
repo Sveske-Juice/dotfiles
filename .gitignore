@@ -1,3 +1,11 @@
 .zcomp*
 .zsh_history
 packer_compiled.lua
+
+# Remove sub modules since they are handled by the package manager
+tmux-sensible/
+vim-tmux-navigator/
+tpm/
+
+# rose pine
+tmux/.config/tmux/plugins/tmux

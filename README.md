@@ -2,7 +2,7 @@
 
 aur:
 
-`zsh-autosuggestions-git`
+`zsh-autosuggestions-git tmux-plugin-manager`
 
 offical packages
 
