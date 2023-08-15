@@ -1,3 +1,4 @@
+.netcoredbg_hist
 .zcomp*
 .zsh_history
 packer_compiled.lua
