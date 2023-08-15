@@ -1,8 +1,5 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
--- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -119,6 +116,13 @@ return require('packer').startup(function(use)
 
   -- Among other things show empty whitespace
   use {"ntpeters/vim-better-whitespace"}
+
+  -- Debugging
+  use {"mfussenegger/nvim-dap"}
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+  -- LaTeX development
+  use {'lervag/vimtex'}
 
   -- Color Schemes
   use { 'rose-pine/neovim', as = 'rose-pine' }

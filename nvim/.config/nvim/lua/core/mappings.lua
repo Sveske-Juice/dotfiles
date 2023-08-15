@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc="Move Line Down"})
@@ -33,13 +34,13 @@ vim.keymap.set("n", "<C-o>", [[:e #<CR>]], {desc="Go back to last buffer"});
 vim.keymap.set("n", "n", "nzzzv");
 vim.keymap.set("n", "N", "Nzzzv");
 
-vim.keymap.set("n", "<F5>", [[:Make<CR>]], {desc="Make project"});
+-- vim.keymap.set("n", "<F5>", [[:Make<CR>]], {desc="Make project"});
 
 -- Dispatch will build the file depending on the vim-dispatch specific compilation method specified for the language in set.lua. 
-vim.keymap.set("n", "<F5>", [[:Dispatch<CR>]], {desc="Make file"});
+-- vim.keymap.set("n", "<F5>", [[:Dispatch<CR>]], {desc="Make file"});
 
 -- It will then run the executable which is assumed to be named the source file without the extension (%< is the file name without extension)
-vim.keymap.set("n", "<F6>", [[:term ./%< && rm %< <CR>]], {desc="Run compiled file"});
+-- vim.keymap.set("n", "<F6>", [[:term ./%< && rm %< <CR>]], {desc="Run compiled file"});
 
 -- Disable c-space - for me the keybinding would paste copied text which is annoying
 vim.keymap.set("i", "<C-space>", [[<Nop>]]);
