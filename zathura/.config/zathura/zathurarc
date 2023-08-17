@@ -55,5 +55,11 @@ set recolor-darkcolor           "#f8f8f2" # Foreground
 set adjust-open width
 set recolor true
 
-# Invert colors map
+# Settings
+set zoom-center "true"
+set selection-clipboard clipboard
+
+# Mappings
 map <C-i> recolor
+map <Space> toggle_index
+

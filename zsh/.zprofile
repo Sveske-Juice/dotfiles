@@ -6,4 +6,4 @@ export TERMINAL="alacritty"
 export ZDOTDIR="$HOME/.config/zsh"
 
 # Cargo binaries
-export PATH="$PATH:/home/redux/.cargo/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
