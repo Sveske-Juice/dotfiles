@@ -1,3 +1,5 @@
+Uses GNU Stow for managing dotfiles
+
 # Dependencies
 
 aur:
@@ -6,7 +8,7 @@ aur:
 
 offical packages
 
-`ripgrep zsh-syntax-highlighting neovim tmux alacritty`
+`stow ripgrep zsh-syntax-highlighting neovim tmux alacritty`
 
 # Install
 
