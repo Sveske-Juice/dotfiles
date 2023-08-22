@@ -123,6 +123,7 @@ return require('packer').startup(function(use)
 
   -- LaTeX development
   use {'lervag/vimtex'}
+  use { 'KeitaNakamura/tex-conceal.vim' }
 
   -- Color Schemes
   use { 'rose-pine/neovim', as = 'rose-pine' }

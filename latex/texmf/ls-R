@@ -1,0 +1,22 @@
+% ls-R -- filename database for kpathsea; do not change this line.
+./:
+.:
+ls-R
+tex
+
+
+./tex:
+latex
+
+./tex/latex:
+common
+templates
+
+./tex/latex/common:
+homework.cls
+
+./tex/latex/templates:
+letterfonts.tex
+macros.tex
+preamble.tex
+template.tex
