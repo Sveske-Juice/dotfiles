@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+OIFS="$IFS"
+IFS=$'\n'
+search_paths=("$HOME/Documents/Programming" "$HOME/Documents/NEXT" "$HOME/Documents/Unity/Projects")
+
+found_repos=()
+
+for path in ${search_paths[@]}
+do
+    echo "Searching $path"
+    repos=$(find $path -type d -name '.git')
+    for repo in ${repos[@]}
+    do
+        found_repos+=($repo)
+    done
+done
+
+# for repo in ${found_repos[@]}
+# do
+#     echo "found! $repo"
+# done
+
+IFS=$'\n'
+selected=$""
+selected=$(echo -e "${found_repos[*]}\n" | fzf)
+
+# quit if no selected
+if ! [ -n "$selected" ]; then
+    exit 1
+fi
+selected=$(dirname "$selected")
+session_name=$(basename $selected)
+
+tmux new-session -d -s "$session_name"
+tmux send-keys -t "$session_name" "cd '$selected'" C-m
+tmux attach-session -t "$session_name"
+
+IFS="$OIFS"
