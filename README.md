@@ -8,7 +8,7 @@ aur:
 
 offical packages
 
-`stow ripgrep zsh-syntax-highlighting neovim tmux alacritty ttf-firacode-nerd`
+`stow ripgrep zsh-syntax-highlighting neovim tmux alacritty ttf-firacode-nerd python3 python-neovim`
 
 # Install
 
