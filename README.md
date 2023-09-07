@@ -27,7 +27,3 @@ press `leader`+`I` to install plugins
 ## nvim
 
 Run :PackerSync
-
-## tmux
-
-in tmux session press `prefix + shift + I` to install plugins
