@@ -4,7 +4,7 @@ Uses GNU Stow for managing dotfiles
 
 aur:
 
-`zsh-autosuggestions-git tmux-plugin-manager oh-my-zsh-git`
+`zsh-autosuggestions-git tmux-plugin-manager oh-my-zsh-git nvim-packer-git`
 
 offical packages
 
