@@ -4,11 +4,11 @@ Uses GNU Stow for managing dotfiles
 
 aur:
 
-`zsh-autosuggestions-git tmux-plugin-manager`
+`zsh-autosuggestions-git tmux-plugin-manager oh-my-zsh-git`
 
 offical packages
 
-`stow ripgrep zsh-syntax-highlighting neovim tmux alacritty`
+`stow ripgrep zsh-syntax-highlighting neovim tmux alacritty ttf-firacode-nerd`
 
 # Install
 
@@ -17,6 +17,12 @@ offical packages
 2. clone repo
 
 3. run `deploy.sh`
+
+## Tmux
+run `tmux`
+press `leader`+`I` to install plugins
+
+## Zsh
 
 ## nvim
 
