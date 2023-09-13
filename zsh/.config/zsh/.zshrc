@@ -107,6 +107,8 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+eval "$(jump shell)"
+
 source $ZSH/oh-my-zsh.sh
 
 # custom plugins
