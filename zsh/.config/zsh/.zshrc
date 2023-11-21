@@ -101,6 +101,7 @@ alias nvedit="nvim $HOME/.config/nvim"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/usr/share/oh-my-zsh/
+export TEXMFHOME=~/texmf
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

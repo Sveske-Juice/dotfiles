@@ -10,3 +10,5 @@ tpm/
 
 # rose pine
 tmux/.config/tmux/plugins/tmux
+
+custom_scripts/
