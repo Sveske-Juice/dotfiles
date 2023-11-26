@@ -1,4 +1,4 @@
-local lsp = require('lsp-zero').preset({})
+local lsp = require("lsp-zero");
 
 lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gd", vim.lsp.buf.definition, {desc="Go to definition", buffer=bufnr, remap=false})
@@ -16,14 +16,9 @@ lsp.on_attach(function(client, bufnr)
   client.server_capabilities.semanticTokensProvider = nil
 end)
 
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
 lsp.set_sign_icons({
     error = '✘ ',
     warn = ' ',
     info = '» ',
     hint = '⚑ ',
 })
-
-lsp.setup()
