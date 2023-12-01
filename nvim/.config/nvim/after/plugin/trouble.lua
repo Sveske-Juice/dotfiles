@@ -1,0 +1,15 @@
+require("trouble").setup({})
+
+-- Trouble Mappings
+vim.keymap.set("n", "<leader>xx", function()
+	require("trouble").toggle()
+end, {desc="Toggle Trouble Menu"})
+vim.keymap.set("n", "<leader>xw", function()
+	require("trouble").toggle("workspace_diagnostics")
+end, {desc="Show Workspace Diagnostics"})
+vim.keymap.set("n", "<leader>xd", function()
+	require("trouble").toggle("document_diagnostics")
+end, {desc="Show Document Diagnostics"})
+vim.keymap.set("n", "<leader>xq", function()
+	require("trouble").toggle("quickfix")
+end, {desc="Show Trouble Quickfix"})

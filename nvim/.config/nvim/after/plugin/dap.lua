@@ -19,7 +19,7 @@ dap.configurations.cs = {
 
 
 -- Key bindings
-vim.keymap.set("n", "<F5>", function() require'dap'.continue() end, {desc="Debug: Continue"});
+vim.keymap.set("n", "<F2>", function() require'dap'.continue() end, {desc="Debug: Continue"});
 vim.keymap.set("n", "<F10>", function() require'dap'.step_over() end, {desc="Debug: Step over"});
 vim.keymap.set("n", "<F11>", function() require'dap'.step_into() end, {desc="Debug: Step into"});
 vim.keymap.set("n", "<F12>", function() require'dap'.step_out() end, {desc="Debug: Step out"});

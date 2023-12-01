@@ -37,7 +37,7 @@ vim.keymap.set("n", "N", "Nzzzv");
 -- vim.keymap.set("n", "<F5>", [[:Make<CR>]], {desc="Make project"});
 
 -- Dispatch will build the file depending on the vim-dispatch specific compilation method specified for the language in set.lua. 
--- vim.keymap.set("n", "<F5>", [[:Dispatch<CR>]], {desc="Make file"});
+vim.keymap.set("n", "<F5>", [[:make<CR>]], {desc="Make file"});
 
 -- It will then run the executable which is assumed to be named the source file without the extension (%< is the file name without extension)
 -- vim.keymap.set("n", "<F6>", [[:term ./%< && rm %< <CR>]], {desc="Run compiled file"});

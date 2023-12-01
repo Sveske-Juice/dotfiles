@@ -9,6 +9,9 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+    -- Overwrite nvim's builting UI select to use telescope
+    use {'nvim-telescope/telescope-ui-select.nvim' }
+
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
@@ -25,18 +28,23 @@ return require("packer").startup(function(use)
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
-			{
-				"williamboman/mason.nvim",
-				run = function()
-					pcall(vim.cmd, "MasonUpdate")
-				end,
-			},
+			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
+			-- Manual LSP's (for settings)
+			{ "p00f/clangd_extensions.nvim" }, -- Clangd extra settings
+
 			-- Autocompletion
-			{ "hrsh7th/nvim-cmp" }, -- Required
-			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
-			{ "L3MON4D3/LuaSnip" }, -- Required
+			{ "hrsh7th/nvim-cmp" },
+			{ "hrsh7th/cmp-buffer" },
+			{ "hrsh7th/cmp-path" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "hrsh7th/cmp-nvim-lua" },
+
+			-- Snippets
+			{ "L3MON4D3/LuaSnip" },
+			{ "rafamadriz/friendly-snippets" },
 		},
 	})
 
@@ -111,12 +119,6 @@ return require("packer").startup(function(use)
 
 	-- Lsp progress UI
 	use({ "j-hui/fidget.nvim", branch = "legacy" })
-
-	-- Snippet engine
-	use({ "SirVer/ultisnips" })
-
-	-- Default snippets
-	use({ "honza/vim-snippets" })
 
 	-- Automatically create/delete corresponding bracket
 	use("m4xshen/autoclose.nvim")
