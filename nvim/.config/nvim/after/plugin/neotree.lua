@@ -3,6 +3,7 @@ require("neo-tree").setup({
     popup_border_style = "rounded",
     enable_git_status = true,
     enable_diagnostics = true,
+    use_libuv_file_watcher=true,
     open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
     sort_function = nil , -- use a custom function for sorting files and directories in the tree 
     -- sort_function = function (a,b)
@@ -13,8 +14,8 @@ require("neo-tree").setup({
         --       end
         --   end , -- this sorts files and directories descendantly
     window = {
-        position = "left",
-        width = 40,
+        position = "right",
+        width = 50,
         mapping_options = {
             noremap = true,
             nowait = true,
@@ -85,7 +86,7 @@ require("neo-tree").setup({
                     --"*/src/*/tsconfig.json",
                 },
                 always_show = { -- remains visible even if other settings would normally hide it 
-                    --".gitignored",
+                    -- ".gitignore"
                 },
                 never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
                     --".DS_Store",

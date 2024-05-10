@@ -11,7 +11,7 @@ require("mason-tool-installer").setup({
 		"clangd", -- C/C++
 		"arduino_language_server", -- Arduino
 		"jedi_language_server", -- python
-		"omnisharp", -- C#
+		-- "omnisharp", -- C#
 		"tsserver", -- Type/Java script
 
 		-- MARKUP
@@ -48,7 +48,7 @@ require("mason-lspconfig").setup({
 			lspconf.omnisharp.setup({
 				on_attach = function(client, bufnr)
 					-- Fix error with omnisharp, see https://github.com/williamboman/mason-lspconfig.nvim/issues/211
-					client.server_capabilities.semanticTokensProvider = nil
+					client.server_capabilities.semanticTokensProvider = false
 				end,
 			})
 		end,
@@ -89,6 +89,8 @@ require("mason-lspconfig").setup({
 						clangext.setup_autocmd()
 						clangext.set_inlay_hints()
 					end
+
+                    vim.keymap.set('n', "gh", [[:ClangdSwitchSourceHeader<CR>]], {desc="Switch to source/header file"})
 				end,
 				inlay_hints = {
 					inline = vim.fn.has("nvim-0.10") == 1,

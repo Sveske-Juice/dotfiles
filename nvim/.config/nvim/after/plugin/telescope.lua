@@ -5,6 +5,7 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {desc="Find project files"})
 vim.keymap.set('n', '<leader>gp', builtin.live_grep, {desc="Grep string in project"})
 vim.keymap.set('n', '<leader>pr', builtin.oldfiles, {desc="Find recent files"})
 vim.keymap.set('n', '<leader>gc', builtin.colorscheme, {desc="Change colorscheme"})
+vim.keymap.set('n', 'gp', [[:Telescope lsp_document_symbols<CR>]], {desc="Find symbols in buffer"})
 vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep: ") }); end, {desc="Search for content in file"})
 
