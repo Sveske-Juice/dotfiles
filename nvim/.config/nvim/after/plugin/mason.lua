@@ -11,8 +11,8 @@ require("mason-tool-installer").setup({
 		"clangd", -- C/C++
 		"arduino_language_server", -- Arduino
 		"jedi_language_server", -- python
-		-- "omnisharp", -- C#
 		"tsserver", -- Type/Java script
+        "csharp_ls",
 
 		-- MARKUP
 		"html", -- HTML
