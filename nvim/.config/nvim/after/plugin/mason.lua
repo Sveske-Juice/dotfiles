@@ -86,8 +86,8 @@ require("mason-lspconfig").setup({
                     -- Configure special things for clangd, see https://github.com/p00f/clangd_extensions.nvim
 					local clangext = require("clangd_extensions.inlay_hints")
 					if clangext then
-						clangext.setup_autocmd()
-						clangext.set_inlay_hints()
+						-- clangext.setup_autocmd()
+						-- clangext.set_inlay_hints()
 					end
 
                     vim.keymap.set('n', "gh", [[:ClangdSwitchSourceHeader<CR>]], {desc="Switch to source/header file"})
