@@ -1,7 +1,7 @@
 vim.g.mapleader = " ";
 vim.g.maploaclleader = " ";
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex);
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {desc="File Explorer"});
 
 -- Move lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", {desc="Move Line Down"})
@@ -17,8 +17,9 @@ vim.keymap.set("n", "N", "Nzzzv");
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {desc="Replace hovered word"})
 
 -- Previous and Next buffer
-vim.keymap.set("n", "<C-O>", vim.cmd.bprevious);
-vim.keymap.set("n", "<C-Tab>", vim.cmd.bnext);
+vim.keymap.set("n", "<S-Tab>", vim.cmd.bprevious, {desc="Previous Buffer"});
+vim.keymap.set("n", "<Tab>", vim.cmd.bnext, {desc="Next Buffer"});
+vim.keymap.set("n", "<C-o>", "<nop>");
 
 vim.keymap.set("x", "<leader>p", "\"_dP", {desc="Paste void register"});
 vim.keymap.set("v", "<leader>y", "\"+y", {desc="Yank to system clipboard"});
