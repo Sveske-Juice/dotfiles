@@ -50,6 +50,11 @@ return {
                         }
                     }
                 end,
+                ["clangd"] = function()
+                    local lspconfig = require("lspconfig")
+                    vim.keymap.set('n', "gh", [[:ClangdSwitchSourceHeader<CR>]], {desc="Switch to source/header file"})
+                    lspconfig.clangd.setup { }
+                end,
             }
         });
 
