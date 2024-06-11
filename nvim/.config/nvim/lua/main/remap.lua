@@ -19,7 +19,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Previous and Next buffer
 vim.keymap.set("n", "<S-Tab>", vim.cmd.bprevious, {desc="Previous Buffer"});
 vim.keymap.set("n", "<Tab>", vim.cmd.bnext, {desc="Next Buffer"});
-vim.keymap.set("n", "<C-o>", "<nop>");
 
 vim.keymap.set("x", "<leader>p", "\"_dP", {desc="Paste void register"});
 vim.keymap.set("v", "<leader>y", "\"+y", {desc="Yank to system clipboard"});

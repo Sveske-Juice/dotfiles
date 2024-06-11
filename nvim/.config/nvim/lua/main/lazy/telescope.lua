@@ -2,6 +2,7 @@ return {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.6",
     dependencies = {
+        "nvim-telescope/telescope-ui-select.nvim",
         "nvim-lua/plenary.nvim",
         "folke/trouble.nvim",
     },
@@ -10,11 +11,11 @@ return {
         vim.keymap.set('n', '<C-p>', builtin.find_files, {desc="Find Files"});
         vim.keymap.set('n', '<leader>pg', builtin.live_grep, {desc="Grep string in files"});
         vim.keymap.set('n', '<leader>pc', builtin.colorscheme, {desc="Change colorscheme"});
+        vim.keymap.set('n', '<leader>pd', builtin.diagnostics, {desc="Diagnostics"});
 
         vim.keymap.set('n', 'gr', builtin.lsp_references, {desc="Find references"});
         vim.keymap.set('n', 'gp', builtin.lsp_document_symbols, {desc="Find symbols in buffer"});
         vim.keymap.set('n', '<leader>gp', builtin.lsp_workspace_symbols, {desc="Find symbols in workspace"});
-        vim.keymap.set('n', '<leader>xd', builtin.diagnostics, {desc="Diagnostics"});
 
         require("trouble").setup({
 
@@ -38,7 +39,13 @@ return {
                     end
                 }
             },
+            extensions = {
+                ["ui-select"] = {
+                    require("telescope.themes").get_dropdown { }
+                }
+            },
         });
+        require("telescope").load_extension("ui-select");
 
     end
 }
