@@ -5,7 +5,7 @@ return {
     config = function()
         require("cord").setup({
             usercmds = true,                              -- Enable user commands
-            log_level = nil,                              -- One of 'trace', 'debug', 'info', 'warn', 'error', 'off'
+            log_level = 'off',                              -- One of 'trace', 'debug', 'info', 'warn', 'error', 'off'
             timer = {
                 interval = 1500,                            -- Interval between presence updates in milliseconds (min 500)
                 reset_on_idle = false,                      -- Reset start timestamp on idle
@@ -19,7 +19,7 @@ return {
             display = {
                 show_time = true,                           -- Display start timestamp
                 show_repository = true,                     -- Display 'View repository' button linked to repository url, if any
-                show_cursor_position = false,               -- Display line and column number of cursor's position
+                show_cursor_position = true,               -- Display line and column number of cursor's position
                 swap_fields = false,                        -- If enabled, workspace is displayed first
                 swap_icons = false,                         -- If enabled, editor is displayed on the main image
                 workspace_blacklist = {},                   -- List of workspace names to hide
