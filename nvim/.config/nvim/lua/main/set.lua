@@ -16,3 +16,6 @@ vim.opt.wrap = false;
 
 vim.opt.hlsearch = false;
 vim.opt.incsearch = true;
+
+vim.netrw_fastbrowse = 2;
+vim.netrw_keepj = "";
