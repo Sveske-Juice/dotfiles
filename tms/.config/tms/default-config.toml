@@ -1,9 +1,0 @@
-search_paths = ['$HOME/Documents/Unity/Projects', '$HOME/Documents/Programming', '$HOME/Documents/NEXT/Programmering B']
-excluded_dirs = [
-    'Assets',
-    'Logs',
-    'Libraries',
-    '3rdParty',
-    'ThirdParty',
-    'Plugins',
-]

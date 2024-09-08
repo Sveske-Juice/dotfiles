@@ -10,6 +10,9 @@ offical packages
 
 `stow ripgrep zsh-syntax-highlighting neovim tmux alacritty ttf-firacode-nerd python3 python-neovim`
 
+## Tmux
+Tmux sessionizer (tms): `cargo install tmux-sessionizer`
+
 # Install
 
 1. install dependencies
