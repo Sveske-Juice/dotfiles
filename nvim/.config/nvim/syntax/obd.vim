@@ -1,14 +1,14 @@
 " Vim syntax file
 " Language: OpenBirch
 " Maintainer: OpenBirch devs @ gitlab/Sveske-Juice/openbirch
-" Latest Revision: 10 August 2024
+" Latest Revision: 08 September 2024
 
 if exists("b:current_syntax")
   finish
 endif
 
 " Keywords
-syn keyword openBirchStatement proc local end return for true false using
+syn keyword openBirchStatement proc local block end return for true false using break continue while for then
 
 " Conditional Keywords
 syn keyword openBirchConditional if elif else contained
@@ -21,9 +21,6 @@ syn match openBirchOperator '\V=\|-\|+\|*\|/\|%\|^\|:='
 " Native procedures
 " TODO: contains is a vim reserved keyword, find a way to include it
 syn keyword openBirchFunction sin cos tan asin acos atan ln log sqrt cbrt nroot print diff lhs rhs type index
-
-" Types
-syn keyword openBirchType NUMBER STRING IDENTIFIER BOOLEAN NIL VECTOR FUNCTION PLUS MINUS MULTIPLICATION DIVISION MODOLUS EXPONENT NEGATE
 
 " Comments
 syn match openBirchComment "#.*$"
