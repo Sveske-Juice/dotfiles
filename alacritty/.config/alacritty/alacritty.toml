@@ -1,4 +1,4 @@
-import = ["/home/redux/.config/alacritty/themes/themes/rose-pine-moon.yaml"]
+general.import = ["/home/redux/.config/alacritty/themes/themes/rose-pine-moon.yaml"]
 
 [cursor]
 blink_interval = 300
@@ -32,7 +32,7 @@ action = "SpawnNewInstance"
 key = "Return"
 mods = "Control|Shift"
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/usr/bin/zsh"
 

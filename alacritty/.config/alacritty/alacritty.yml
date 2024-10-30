@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 # See https://github.com/alacritty/alacritty-theme
-import:
+general.import:
     - ~/.config/alacritty/themes/themes/rose-pine-moon.yaml
       #- ~/.config/alacritty/themes/themes/rose-pine-dawn.yaml
 
